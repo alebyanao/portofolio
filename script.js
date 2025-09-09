@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const aboutSection = document.getElementById('about');
         
         if (banner && scrollPosition < banner.offsetHeight + (aboutSection ? aboutSection.offsetTop / 2 : 500)) {
-            setActiveLink('About');
+            setActiveLink('Tentang');
         } else {
             // Check other sections
             const experienceSection = document.getElementById('experience') || document.querySelector('.experience-section');
@@ -84,14 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (experienceSection && scrollPosition >= experienceSection.offsetTop - 150 && 
                 scrollPosition < experienceSection.offsetTop + experienceSection.offsetHeight - 150) {
-                setActiveLink('Experience');
+                setActiveLink('Pengalaman');
             } else if (certificateSection && scrollPosition >= certificateSection.offsetTop - 150 && 
                       scrollPosition < certificateSection.offsetTop + certificateSection.offsetHeight - 150) {
-                setActiveLink('Sertificate');
+                setActiveLink('Sertifikat');
             } else if (contactSection && scrollPosition >= contactSection.offsetTop - 150) {
-                setActiveLink('Contact');
+                setActiveLink('Kontak');
             } else if (aboutSection && scrollPosition >= aboutSection.offsetTop - 150) {
-                setActiveLink('About');
+                setActiveLink('Tentang');
             }
         }
     }
