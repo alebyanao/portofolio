@@ -1,0 +1,47 @@
+.navbar-custom {
+  background: linear-gradient(to bottom, #a013968f, #ffffff);
+  /* background: linear-gradient(189.2deg, #A01397 -113.27%, rgba(255, 255, 255, 0.25) 131.32%); */
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+  height: 85px;
+}
+
+.navbar-custom .nav-link {
+  color: #2c0032 !important;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #6a1b9a !important;
+}
+
+.banner {
+  position: relative;
+}
+
+.circle-group {
+  position: absolute;
+  top: 100px;  /* jarak dari bawah banner */
+  left: 100px;    /* jarak dari kiri banner */
+}
+
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Warna gradasi tiap lingkaran */
+.purple1 {
+  background: linear-gradient(180deg, #6217BE 0%, rgba(46, 11, 88, 0) 100%);
+}
+.purple2 {
+  background: linear-gradient(180deg, #A01397 0%, rgba(58, 7, 55, 0) 100%);
+}
+.purple3 {
+  background: linear-gradient(180deg, #4A1255 0%, rgba(162, 40, 187, 0) 100%);
+}
+.purple4 {
+  background: linear-gradient(180deg, #3E0E4B 0%, rgba(120, 30, 120, 0) 100%);
+}
