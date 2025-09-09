@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar Horizontal</title>
+   <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -14,10 +17,10 @@
     <nav class="navbar navbar-custom">
     <div class="container-fluid justify-content-end">
         <ul class="navbar-nav d-flex gap-5 px-5 flex-row">
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sertificate</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificate">Sertifikat</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
         </ul>
     </div>
     </nav>
@@ -39,7 +42,209 @@
     <div class="star-bg"></div>
     <div class="star-shape"></div>
   </div>
-  
+
+ <div class="portfolio-title">
+  <span class="p">P</span>
+  <span class="o1">o</span>
+  <span class="r">R</span>
+  <span class="t">T</span>
+  <span class="o2">o</span>
+  <span class="f">F</span>
+  <span class="o3">O</span> <!-- Tambahan O -->
+  <span class="l">L</span>
+  <span class="i">I</span>
+  <span class="o4">O</span> <!-- Tambahan O terakhir -->
+</div>
+
+
+  <div class="portfolio-name">- Abelya Octaviani -</div>
+
+</div>
+
+<!-- ABOUT -->
+
+  <section id="about" class="about-section position-relative">
+    <!-- Lingkaran background -->
+    <div class="about-circle"></div>
+
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Kolom teks -->
+        <div class="col-md-7">
+          <h3 class="about-title">Tentang Saya</h3>
+          <h1 class="about-name">Abelya Octaviani</h1>
+          <div class="about-container">
+          <h4 class="about-role">Beginner Development</h4>
+          <p class="about-desc">
+            Menduduki bangku kelas 12 di SMK Negeri 2 Surabaya, Jurusan Rekayasa Perangkat Lunak 
+            yang memiliki ketertarikan untuk mengembangkan skill bidang desain, robotika, dan perangkat lunak. 
+            Selain itu, tertarik dengan skill leadership, public speaking, dan networking. 
+            Sehingga memiliki keterampilan komunikasi yang efektif, 
+            dan memungkinkan untuk bekerja dengan baik dalam tim maupun secara mandiri.
+          </p>
+          </div>
+        </div>
+
+        <!-- Kolom foto -->
+        <div class="col-md-5 text-center mt-n5">
+          <div class="about-photo-wrapper">
+            <img src="foto1.png" alt="Foto Profil">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience-section">
+  <!-- Ellipse background -->
+  <div class="experience-bg"></div>
+
+  <div class="container">
+    <h2 class="experience-title">Pengalaman</h2>
+
+    <div class="row">
+      <!-- Kolom kiri -->
+      <div class="col-md-5 experience-left">
+        <div class="exp-item">
+          <h3 class="exp-num">01</h3>
+          <p class="exp-text">
+            Selama SMP saya aktif berorganisasi melalui OSIS sebagai Ketua Seksi Bidang Pendidikan dan Pancasila. 
+            Peran ini melatih saya dalam mengelola kegiatan sekolah, memimpin dan bekerjasama dalam tim, serta 
+            mengembangkan kemampuan komunikasi interpersonal. Selain itu, pengalaman paling berharga selama masa 
+            SMP adalah mengikuti Lomba Penelitian Pelajar Surabaya (LPPS). Dalam proses tersebut, saya memperoleh 
+            keterampilan penting seperti public speaking, penulisan karya tulis ilmiah, penelitian, pembuatan desain 
+            poster, dan presentasi (PowerPoint). Melalui lomba ini, saya belajar berpikir kritis, kreatif, serta mampu 
+            menyampaikan ide secara sistematis dan menarik.
+          </p>
+        </div>
+
+        <div class="exp-item">
+          <h3 class="exp-num">02</h3>
+          <p class="exp-text">
+            Memasuki masa SMK, saya aktif kembali di OSIS dan dipercaya menjadi Wakil Ketua OSIS periode 2023–2024, 
+            di mana saya mengasah berbagai keterampilan penting seperti leadership, manajemen administrasi, problem 
+            solving, public speaking, event management, serta kerjasama tim. Pengalaman ini tidak hanya memperkuat 
+            kemampuan organisasi saya, tetapi juga membentuk karakter disiplin, tanggung jawab, dan kemampuan adaptasi 
+            dalam menghadapi berbagai tantangan.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rectangle tengah -->
+      <div class="col-md-2 text-center">
+        <div class="experience-rect"></div>
+      </div>
+
+      <!-- Kolom kanan -->
+      <div class="col-md-5 experience-right">
+        <div class="exp-item">
+          <h3 class="exp-num">03</h3>
+          <p class="exp-text">
+            Di SMK, saya mengikuti ekstrakurikuler Robotika yang melatih berbagai keterampilan seperti problem solving, 
+            critical thinking, teamwork, coding & programming (IoT dan mikrokontroler), desain & perakitan hardware, 
+            troubleshooting, serta kreativitas dalam menciptakan inovasi teknologi. Saya juga aktif mengikuti berbagai 
+            perlombaan di bidang IoT, teknologi tepat guna, robot soccer, fire fight roboboat, LKTI, hingga robot sumo, 
+            dan beberapa di antaranya berhasil meraih prestasi juara.
+          </p>
+        </div>
+
+        <div class="exp-item">
+          <h3 class="exp-num">04</h3>
+          <p class="exp-text">
+            Dengan berbekal pengalaman sebagai Wakil Ketua OSIS, saya memberanikan diri mengajukan diri dan akhirnya 
+            terpilih menjadi Ketua OSIS periode 2024–2025. Selama masa jabatan ini, saya mendapatkan pembelajaran 
+            yang lebih luas, mulai dari problem solving, public speaking, leadership, manajemen organisasi, komunikasi 
+            interpersonal, negosiasi, pengambilan keputusan, hingga manajemen konflik. Saya juga beberapa kali berkesempatan 
+            bertemu dan berdiskusi dengan tokoh-tokoh inspiratif di berbagai forum, yang memperluas wawasan serta jejaring 
+            saya. Pengalaman ini melatih saya untuk menjadi pemimpin yang adaptif, visioner, dan bertanggung jawab, serta 
+            mampu membawa tim untuk mewujudkan berbagai program kerja sekolah secara efektif dan inovatif.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-images text-center">
+    <div class="exp-img-wrapper">
+      <div class="exp-img-bg"></div>
+      <img src="foto1.jpg" class="exp-img" alt="Foto 1">
+    </div>
+
+    <div class="exp-img-wrapper">
+      <div class="exp-img-bg"></div>
+      <img src="foto2.jpg" class="exp-img" alt="Foto 2">
+    </div>
+
+    <div class="exp-img-wrapper">
+      <div class="exp-img-bg"></div>
+      <img src="foto3.jpg" class="exp-img" alt="Foto 3">
+    </div>
+
+    <div class="exp-img-wrapper">
+      <div class="exp-img-bg"></div>
+      <img src="foto4.jpg" class="exp-img" alt="Foto 4">
+    </div>
+  </div>
+
+    <!-- Foto di bawah -->
+    <!-- <div class="experience-images text-center">
+      <img src="foto-kiri.png" class="exp-img img-left" alt="Kegiatan 1">
+      <img src="foto-orang.png" class="exp-img img-center" alt="Abelya">
+      <img src="foto-kanan.png" class="exp-img img-right" alt="Kegiatan 2">
+    </div> -->
+  </div>
+</section>
+
+<!-- SERTIFIKAT -->
+<div class="container">
+<div class="certificate-section id="certificate">
+  <h2 class="certificate-title">Sertifikat</h2>
+  <ul class="certificate-list">
+    <li>Juara 1 Soccer Robot Competition KEJURNAS, di Trans Studio Mini Malang, 27–28 Januari 2024</li>
+    <li>Juara 1 Lomba Technologi Tepat Guna, ELTRUMS XI - Electro Techno Race UMS Competition 2024</li>
+    <li>Juara 2 Lomba FIRE FIGHT ROBOBOAT Automation week VII 2024 - Politeknik Perkapalan Negeri Surabaya</li>
+    <li>Juara 3 Soccer Robot, Industrial Automation and Robotic Competition (IARC) 2024 - Institut Teknologi Sepuluh Nopember</li>
+  </ul>
+
+  <div class="certificate-images">
+    <img src="sertifikat1.jpg" alt="Sertifikat 1">
+    <img src="sertifikat2.jpg" alt="Sertifikat 2">
+  </div>
+</div>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Kontak</h2>
+    <p class="section-subtitle">
+      Silakan hubungi saya melalui form berikut atau langsung via email/telepon.
+    </p>
+
+    <div class="row contact-content">
+      <!-- Info Kontak -->
+      <div class="col-md-5 contact-info">
+        <h4>Informasi</h4>
+        <p><strong>Email:</strong> abelyanaumioctaviani06@gmail.com</p>
+        <p><strong>Alamat:</strong> Surabaya, Jawa Timur</p>
+      </div>
+
+      <!-- Form Kontak -->
+      <div class="col-md-7">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Nama Lengkap" required />
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+          </div>
+          <button type="submit" class="btn-contact">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
 
 

@@ -1,3 +1,5 @@
+
+
 .navbar-custom {
   background: linear-gradient(to bottom, #a013968f, #ffffff);
   /* background: linear-gradient(189.2deg, #A01397 -113.27%, rgba(255, 255, 255, 0.25) 131.32%); */
@@ -25,6 +27,7 @@
   left: 100px;    /* jarak dari kiri banner */
 }
 
+
 .circle {
   width: 50px;
   height: 50px;
@@ -48,29 +51,32 @@
 /* Bungkus bintang */
 .star-wrapper {
   position: absolute;
-  top: 180px;   /* atur posisi */
-  right: 100px; /* atau pakai left sesuai kebutuhan */
-  width: 450px;
-  height: 450px;
+  top: 180px;   /* posisi bintang */
+  right: 100px;
+  width: 355px;   /* ikuti ukuran bintang */
+  height: 355px;
 }
 
-/* Lingkaran radial */
+/* Glow di belakang bintang */
 .star-bg {
   position: absolute;
-  inset: 0;
+  top: -50px;   /* geser biar glow naik ke atas */
+  left: -50px;
+  width: 455px;  /* lebih besar dari bintang */
+  height: 455px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(74, 18, 85, 0.9) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(74, 18, 85, 0.5) 0%,
+    rgba(74, 18, 85, 0) 87%
   );
+  filter: blur(60px); /* bikin efek menyebar */
+  z-index: 0; /* pastikan glow di belakang */
 }
 
 /* Bentuk bintang */
 .star-shape {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 355px;
   height: 355px;
   background: conic-gradient(
@@ -90,8 +96,377 @@
     32% 57%,
     2% 35%,
     39% 35%
-  ); /* bikin bintang 5 sisi */
+  );
   transform: rotate(-15deg) scale(0.95);
   box-shadow: inset 0 4px 4px rgba(0,0,0,0.25);
+  z-index: 1; /* bintang di atas glow */
 }
 
+.portfolio-title {
+  position: absolute; /* ganti relative jadi absolute */
+  top: 40%;           /* posisi tengah vertikal banner */
+  left: 50%;          /* posisi tengah horizontal banner */
+  transform: translate(-50%, -50%); /* biar betul2 center */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+
+.portfolio-title span {
+  font-family: 'Irish Grover', cursive;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+}
+
+/* Huruf spesifik */
+.p {
+  font-size: 155px;
+  color: #6217BE;
+  transform: rotate(5.3deg);
+}
+
+.o1 {
+  font-size: 225px;
+  color: #A01397;
+}
+
+.r {
+  font-size: 145px;
+  color: #6217BE;
+  transform: rotate(-3.05deg);
+}
+
+.t {
+  font-size: 175px;
+  color: #6217BE;
+}
+
+.o2 {
+  font-size: 250px;
+  color: #A01397;
+}
+
+.f {
+  font-size: 145px;
+  color: #6217BE;
+}
+
+.l {
+  font-size: 165px;
+  color: #6217BE;
+  transform: rotate(-12.35deg);
+}
+
+.i {
+  font-size: 135px;
+  color: #6217BE;
+}
+
+.o3 {
+  font-size: 225px;
+  color: #A01397;
+}
+
+
+.o4 {
+  font-size: 200px;
+  color: #A01397;
+}
+
+
+/* Nama di bawah tulisan PORTFOLIO */
+.portfolio-name {
+  position: absolute;
+  top: 52%;              /* posisikan di bawah judul */
+  left: 50%;             /* rata tengah */
+  transform: translateX(-50%);
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100px;
+  color: #A01397;
+}
+
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Lingkaran background */
+.about-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -50px;
+  top: -60px; /* atur sesuai kebutuhan */
+  background: radial-gradient(
+    50% 50% at 50% 50%, 
+    rgba(98, 23, 190, 0.5) 0%, 
+    rgba(196, 168, 231, 0.1875) 69%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 0;
+}
+
+/* Teks */
+.about-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: 24px;
+  font-weight: 700;
+  color: #4a1255;
+}
+
+.about-name {
+  font-size: 50px;
+  font-weight: 800;
+  color: #A01397;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* otomatis kasih jarak antar anak */
+}
+
+.about-role {
+  font-size: 24px;
+  font-weight: 700;
+  color: gray;
+  margin-bottom: 15px ;
+}
+
+.about-desc {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 500;
+  color: #2c0032;
+}
+
+.experience-section {
+  position: relative;
+  padding: 100px 0;
+}
+
+.experience-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 40%; /* posisi vertikal di tengah */
+  transform: translateY(-50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(98, 23, 190, 0.5) 0%,
+    rgba(196, 168, 231, 0.1875) 69%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
+}
+
+.experience-title {
+  font-size: 42px;
+  font-family: 'Irish Grover', cursive;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #4a1255;
+}
+
+.exp-item {
+  margin-bottom: 40px;
+}
+
+.exp-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: #a01397;
+}
+
+.exp-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #2c0032;
+  margin-top: 10px;
+}
+
+.experience-rect {
+  width: 40px;
+  height: 100%;
+  margin: 0 auto;
+  background: #a01397;
+  border: 2px solid #4a1255;
+  border-radius: 24px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.experience-images {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.exp-img {
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(160, 19, 151, 0.5);
+}
+
+.img-left {
+  width: 300px;
+  transform: rotate(-5deg);
+}
+
+.img-center {
+  width: 280px;
+}
+
+.img-right {
+  width: 300px;
+  transform: rotate(5deg);
+}
+
+.experience-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap; /* biar responsive */
+}
+
+.exp-img-wrapper {
+  position: relative;
+  width: 300px; /* atur sesuai kebutuhan */
+  height: 350px;
+}
+
+
+.exp-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.certificate-section {
+  box-sizing: border-box;
+  position: relative;
+  width: 1212px;
+  height: auto;
+  margin: 60px auto;
+  padding: 40px;
+  border: 3px solid #A01397;
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  background: #fff;
+}
+
+.certificate-title {
+  text-align: center;
+  font-family: 'Irish Grover', cursive;
+  font-size: 36px;
+  font-weight: 700;
+  color: #4a1255;
+  margin-bottom: 30px;
+}
+
+.certificate-list {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4A1255;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.certificate-list li {
+  margin-bottom: 12px;
+}
+
+.certificate-images {
+  display: flex;
+  justify-content: center ;
+  align-items: center !important; 
+  /* flex-wrap: wrap;  */
+  gap: 20px;
+}
+
+.certificate-images img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(160, 19, 151, 0.5);
+}
+
+.contact-section {
+  position: relative;
+  padding: 80px 0;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(98, 23, 190, 0.1) 0%,
+    rgba(196, 168, 231, 0.05) 69%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.section-title {
+  font-family: 'Irish Grover', cursive;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: #4a1255;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 50px;
+}
+
+.contact-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2c0032;
+}
+
+.contact-info h4 {
+  font-weight: 700;
+  color: #a01397;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #a01397;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.btn-contact {
+  background: #a01397;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background: #4a1255;
+  box-shadow: 0px 4px 10px rgba(160, 19, 151, 0.4);
+}
