@@ -3,250 +3,600 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Horizontal</title>
-   <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet">
+  <title>Portfolio - Abelya Octaviani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Italianno&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<div class="sticky-top">
-    <nav class="navbar navbar-custom">
-    <div class="container-fluid justify-content-end">
-        <ul class="navbar-nav d-flex gap-5 px-5 flex-row">
-        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certificate">Sertifikat</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-        </ul>
+<!-- LOADING ANIMATION -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-content">
+    <div class="loading-logo">
+      <span class="loading-letter">P</span>
+      <span class="loading-letter">O</span>
+      <span class="loading-letter">R</span>
+      <span class="loading-letter">T</span>
+      <span class="loading-letter">F</span>
+      <span class="loading-letter">O</span>
+      <span class="loading-letter">L</span>
+      <span class="loading-letter">I</span>
+      <span class="loading-letter">O</span>
     </div>
-    </nav>
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+    <p class="loading-text">Memuat Portfolio...</p>
+  </div>
 </div>
 
-<!-- BANNER -->
-<div class="banner position-relative">
-  <img src="banner.jpg" class="d-block w-100" alt="banner.jpg">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top" id="mainNavbar">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#home">
+      <span class="brand-text">Portfolio</span>
+    </a>
+    
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
 
-  <!-- Lingkaran ada di dalam banner -->
-  <div class="circle-group d-flex gap-3">
-    <div class="circle purple1"></div>
-    <div class="circle purple2"></div>
-    <div class="circle purple3"></div>
-    <div class="circle purple4"></div>
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">
+            <i class="fas fa-home nav-icon"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">
+            <i class="fas fa-user nav-icon"></i>
+            <span>Tentang</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">
+            <i class="fas fa-code nav-icon"></i>
+            <span>Proyek</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">
+            <i class="fas fa-briefcase nav-icon"></i>
+            <span>Pengalaman</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certificate">
+            <i class="fas fa-certificate nav-icon"></i>
+            <span>Sertifikat</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">
+            <i class="fas fa-envelope nav-icon"></i>
+            <span>Kontak</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- BANNER / HOME -->
+<section id="home" class="banner position-relative">
+  <img src="banner.jpg" class="banner-img d-block w-100" alt="banner">
+
+  <!-- Animated Circles -->
+  <div class="circle-group animate-float">
+    <div class="circle purple1 animate-pulse"></div>
+    <div class="circle purple2 animate-pulse" style="animation-delay: 0.5s;"></div>
+    <div class="circle purple3 animate-pulse" style="animation-delay: 1s;"></div>
+    <div class="circle purple4 animate-pulse" style="animation-delay: 1.5s;"></div>
   </div>
 
-  <div class="star-wrapper">
+  <!-- Animated Star -->
+  <div class="star-wrapper animate-rotate">
     <div class="star-bg"></div>
     <div class="star-shape"></div>
   </div>
 
- <div class="portfolio-title">
-  <span class="p">P</span>
-  <span class="o1">o</span>
-  <span class="r">R</span>
-  <span class="t">T</span>
-  <span class="o2">o</span>
-  <span class="f">F</span>
-  <span class="o3">O</span> <!-- Tambahan O -->
-  <span class="l">L</span>
-  <span class="i">I</span>
-  <span class="o4">O</span> <!-- Tambahan O terakhir -->
-</div>
-
-
-  <div class="portfolio-name">- Abelya Octaviani -</div>
-
-</div>
-
-<!-- ABOUT -->
-
-  <section id="about" class="about-section position-relative">
-    <!-- Lingkaran background -->
-    <div class="about-circle"></div>
-
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <!-- Kolom teks -->
-        <div class="col-md-7">
-          <h3 class="about-title">Tentang Saya</h3>
-          <h1 class="about-name">Abelya Octaviani</h1>
-          <div class="about-container">
-          <h4 class="about-role">Beginner Development</h4>
-          <p class="about-desc">
-            Menduduki bangku kelas 12 di SMK Negeri 2 Surabaya, Jurusan Rekayasa Perangkat Lunak 
-            yang memiliki ketertarikan untuk mengembangkan skill bidang desain, robotika, dan perangkat lunak. 
-            Selain itu, tertarik dengan skill leadership, public speaking, dan networking. 
-            Sehingga memiliki keterampilan komunikasi yang efektif, 
-            dan memungkinkan untuk bekerja dengan baik dalam tim maupun secara mandiri.
-          </p>
-          </div>
-        </div>
-
-        <!-- Kolom foto -->
-        <div class="col-md-5 text-center mt-n5">
-          <div class="about-photo-wrapper">
-            <img src="foto1.png" alt="Foto Profil">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="experience-section">
-  <!-- Ellipse background -->
-  <div class="experience-bg"></div>
-
-  <div class="container">
-    <h2 class="experience-title">Pengalaman</h2>
-
-    <div class="row">
-      <!-- Kolom kiri -->
-      <div class="col-md-5 experience-left">
-        <div class="exp-item">
-          <h3 class="exp-num">01</h3>
-          <p class="exp-text">
-            Selama SMP saya aktif berorganisasi melalui OSIS sebagai Ketua Seksi Bidang Pendidikan dan Pancasila. 
-            Peran ini melatih saya dalam mengelola kegiatan sekolah, memimpin dan bekerjasama dalam tim, serta 
-            mengembangkan kemampuan komunikasi interpersonal. Selain itu, pengalaman paling berharga selama masa 
-            SMP adalah mengikuti Lomba Penelitian Pelajar Surabaya (LPPS). Dalam proses tersebut, saya memperoleh 
-            keterampilan penting seperti public speaking, penulisan karya tulis ilmiah, penelitian, pembuatan desain 
-            poster, dan presentasi (PowerPoint). Melalui lomba ini, saya belajar berpikir kritis, kreatif, serta mampu 
-            menyampaikan ide secara sistematis dan menarik.
-          </p>
-        </div>
-
-        <div class="exp-item">
-          <h3 class="exp-num">02</h3>
-          <p class="exp-text">
-            Memasuki masa SMK, saya aktif kembali di OSIS dan dipercaya menjadi Wakil Ketua OSIS periode 2023–2024, 
-            di mana saya mengasah berbagai keterampilan penting seperti leadership, manajemen administrasi, problem 
-            solving, public speaking, event management, serta kerjasama tim. Pengalaman ini tidak hanya memperkuat 
-            kemampuan organisasi saya, tetapi juga membentuk karakter disiplin, tanggung jawab, dan kemampuan adaptasi 
-            dalam menghadapi berbagai tantangan.
-          </p>
-        </div>
-      </div>
-
-      <!-- Rectangle tengah -->
-      <div class="col-md-2 text-center">
-        <div class="experience-rect"></div>
-      </div>
-
-      <!-- Kolom kanan -->
-      <div class="col-md-5 experience-right">
-        <div class="exp-item">
-          <h3 class="exp-num">03</h3>
-          <p class="exp-text">
-            Di SMK, saya mengikuti ekstrakurikuler Robotika yang melatih berbagai keterampilan seperti problem solving, 
-            critical thinking, teamwork, coding & programming (IoT dan mikrokontroler), desain & perakitan hardware, 
-            troubleshooting, serta kreativitas dalam menciptakan inovasi teknologi. Saya juga aktif mengikuti berbagai 
-            perlombaan di bidang IoT, teknologi tepat guna, robot soccer, fire fight roboboat, LKTI, hingga robot sumo, 
-            dan beberapa di antaranya berhasil meraih prestasi juara.
-          </p>
-        </div>
-
-        <div class="exp-item">
-          <h3 class="exp-num">04</h3>
-          <p class="exp-text">
-            Dengan berbekal pengalaman sebagai Wakil Ketua OSIS, saya memberanikan diri mengajukan diri dan akhirnya 
-            terpilih menjadi Ketua OSIS periode 2024–2025. Selama masa jabatan ini, saya mendapatkan pembelajaran 
-            yang lebih luas, mulai dari problem solving, public speaking, leadership, manajemen organisasi, komunikasi 
-            interpersonal, negosiasi, pengambilan keputusan, hingga manajemen konflik. Saya juga beberapa kali berkesempatan 
-            bertemu dan berdiskusi dengan tokoh-tokoh inspiratif di berbagai forum, yang memperluas wawasan serta jejaring 
-            saya. Pengalaman ini melatih saya untuk menjadi pemimpin yang adaptif, visioner, dan bertanggung jawab, serta 
-            mampu membawa tim untuk mewujudkan berbagai program kerja sekolah secara efektif dan inovatif.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="experience-images text-center">
-    <div class="exp-img-wrapper">
-      <div class="exp-img-bg"></div>
-      <img src="foto1.jpg" class="exp-img" alt="Foto 1">
-    </div>
-
-    <div class="exp-img-wrapper">
-      <div class="exp-img-bg"></div>
-      <img src="foto2.jpg" class="exp-img" alt="Foto 2">
-    </div>
-
-    <div class="exp-img-wrapper">
-      <div class="exp-img-bg"></div>
-      <img src="foto3.jpg" class="exp-img" alt="Foto 3">
-    </div>
-
-    <div class="exp-img-wrapper">
-      <div class="exp-img-bg"></div>
-      <img src="foto4.jpg" class="exp-img" alt="Foto 4">
-    </div>
+  <!-- Main Title with Animation -->
+  <div class="portfolio-title">
+    <span class="p animate-bounce-in">P</span>
+    <span class="o1 animate-bounce-in" style="animation-delay: 0.1s;">o</span>
+    <span class="r animate-bounce-in" style="animation-delay: 0.2s;">R</span>
+    <span class="t animate-bounce-in" style="animation-delay: 0.3s;">T</span>
+    <span class="o2 animate-bounce-in" style="animation-delay: 0.4s;">o</span>
+    <span class="f animate-bounce-in" style="animation-delay: 0.5s;">F</span>
+    <span class="o3 animate-bounce-in" style="animation-delay: 0.6s;">O</span>
+    <span class="l animate-bounce-in" style="animation-delay: 0.7s;">L</span>
+    <span class="i animate-bounce-in" style="animation-delay: 0.8s;">I</span>
+    <span class="o4 animate-bounce-in" style="animation-delay: 0.9s;">O</span>
   </div>
 
-    <!-- Foto di bawah -->
-    <!-- <div class="experience-images text-center">
-      <img src="foto-kiri.png" class="exp-img img-left" alt="Kegiatan 1">
-      <img src="foto-orang.png" class="exp-img img-center" alt="Abelya">
-      <img src="foto-kanan.png" class="exp-img img-right" alt="Kegiatan 2">
-    </div> -->
+  <div class="portfolio-name animate-fade-up">- Abelya Octaviani -</div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down animate-bounce"></i>
   </div>
 </section>
 
-<!-- SERTIFIKAT -->
-<div class="container">
-<div class="certificate-section id="certificate">
-  <h2 class="certificate-title">Sertifikat</h2>
-  <ul class="certificate-list">
-    <li>Juara 1 Soccer Robot Competition KEJURNAS, di Trans Studio Mini Malang, 27–28 Januari 2024</li>
-    <li>Juara 1 Lomba Technologi Tepat Guna, ELTRUMS XI - Electro Techno Race UMS Competition 2024</li>
-    <li>Juara 2 Lomba FIRE FIGHT ROBOBOAT Automation week VII 2024 - Politeknik Perkapalan Negeri Surabaya</li>
-    <li>Juara 3 Soccer Robot, Industrial Automation and Robotic Competition (IARC) 2024 - Institut Teknologi Sepuluh Nopember</li>
-  </ul>
-
-  <div class="certificate-images">
-    <img src="sertifikat1.jpg" alt="Sertifikat 1">
-    <img src="sertifikat2.jpg" alt="Sertifikat 2">
-  </div>
-</div>
-
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2 class="section-title">Kontak</h2>
-    <p class="section-subtitle">
-      Silakan hubungi saya melalui form berikut atau langsung via email/telepon.
-    </p>
-
-    <div class="row contact-content">
-      <!-- Info Kontak -->
-      <div class="col-md-5 contact-info">
-        <h4>Informasi</h4>
-        <p><strong>Email:</strong> abelyanaumioctaviani06@gmail.com</p>
-        <p><strong>Alamat:</strong> Surabaya, Jawa Timur</p>
+<!-- ABOUT -->
+<section id="about" class="about-section position-relative">
+  <div class="about-circle animate-pulse-slow"></div>
+  
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7 col-md-6">
+        <div class="about-content animate-slide-right">
+          <h3 class="about-title">Tentang Saya</h3>
+          <h1 class="about-name">Abelya Octaviani</h1>
+          <div class="about-container">
+            <h4 class="about-role">Beginner Development</h4>
+            <p class="about-desc">
+              Menduduki bangku kelas 12 di SMK Negeri 2 Surabaya, Jurusan Rekayasa Perangkat Lunak 
+              yang memiliki ketertarikan untuk mengembangkan skill bidang desain, robotika, dan perangkat lunak. 
+              Selain itu, tertarik dengan skill leadership, public speaking, dan networking. 
+              Sehingga memiliki keterampilan komunikasi yang efektif, 
+              dan memungkinkan untuk bekerja dengan baik dalam tim maupun secara mandiri.
+            </p>
+            
+            <!-- Skills Progress Bars -->
+            <div class="skills-section mt-4">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Programming</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="85"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Desain Grafis</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Leadership</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="95"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Form Kontak -->
-      <div class="col-md-7">
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nama Lengkap" required />
+      <div class="col-lg-5 col-md-6 text-center">
+        <div class="about-photo-wrapper animate-slide-left">
+          <img src="foto1.png" alt="Foto Profil" class="about-photo">
+          <div class="photo-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="section-header text-center animate-fade-up">
+      <h2 class="section-title">Proyek</h2>
+    </div>
+
+    <div class="projects-filter text-center mb-5">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="robotics">Robotika</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+    </div>
+
+    <div class="row projects-grid">
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="robotics">
+        <div class="project-card animate-scale-up">
+          <div class="project-image">
+            <img src="proyek.jpeg " alt="Robot Soccer">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required />
+          <div class="project-content">
+            <h4>Robot Soccer</h4>
+            <p>Robot sepak bola autonomous dengan AI navigation</p>
+            <div class="project-tech">
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">IoT</span>
+            </div>
           </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="web">
+        <div class="project-card animate-scale-up">
+          <div class="project-image">
+            <img src="proyek.jpeg" alt="Web Portfolio">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
           </div>
-          <button type="submit" class="btn-contact">Kirim Pesan</button>
+          <div class="project-content">
+            <h4>Portfolio Website</h4>
+            <p>Website portfolio responsif dengan animasi modern</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="iot">
+        <div class="project-card animate-scale-up">
+          <div class="project-image">
+            <img src="proyek.jpeg" alt="IoT Monitoring">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Smart Monitoring System</h4>
+            <p>Sistem monitoring berbasis IoT untuk greenhouse</p>
+            <div class="project-tech">
+              <span class="tech-tag">ESP32</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">React</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="robotics">
+        <div class="project-card animate-scale-up">
+          <div class="project-image">
+            <img src="proyek.jpeg" alt="Fire Fighting Robot">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Fire Fighting Robot</h4>
+            <p>Robot pemadam api otomatis dengan sensor thermal</p>
+            <div class="project-tech">
+              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">Sensors</span>
+              <span class="tech-tag">C++</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="web">
+        <div class="project-card animate-scale-up">
+          <div class="project-image">
+            <img src="proyek.jpeg" alt="School Management">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>School Management App</h4>
+            <p>Aplikasi manajemen sekolah berbasis web</p>
+            <div class="project-tech">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="iot">
+        <div class="project-card animate-scale-up">
+          <div class="project-image">
+            <img src="proyek.jpeg" alt="Smart Home">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4>Smart Garden System</h4>
+            <p>Sistem taman dengan kontrol mobile</p>
+            <div class="project-tech">
+              <span class="tech-tag">Sensor</span>
+              <span class="tech-tag">Iot</span>
+              <span class="tech-tag">Android</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience-section">
+  <div class="experience-bg animate-pulse-slow"></div>
+
+  <div class="container">
+    <div class="section-header text-center animate-fade-up">
+      <h2 class="experience-title">Pengalaman</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item animate-slide-right">
+        <div class="timeline-marker">01</div>
+        <div class="timeline-content">
+          <h3>SMP - OSIS & Penelitian</h3>
+          <p>Selama SMP saya aktif berorganisasi melalui OSIS sebagai Ketua Seksi Bidang Pendidikan dan Pancasila. 
+          Peran ini melatih saya dalam mengelola kegiatan sekolah, memimpin dan bekerjasama dalam tim, serta 
+          mengembangkan kemampuan komunikasi interpersonal. Selain itu, pengalaman paling berharga selama masa 
+          SMP adalah mengikuti Lomba Penelitian Pelajar Surabaya (LPPS).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item animate-slide-left">
+        <div class="timeline-marker">02</div>
+        <div class="timeline-content">
+          <h3>SMK - Wakil Ketua OSIS</h3>
+          <p>Memasuki masa SMK, saya aktif kembali di OSIS dan dipercaya menjadi Wakil Ketua OSIS periode 2023–2024, 
+          di mana saya mengasah berbagai keterampilan penting seperti leadership, manajemen administrasi, problem 
+          solving, public speaking, event management, serta kerjasama tim.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item animate-slide-right">
+        <div class="timeline-marker">03</div>
+        <div class="timeline-content">
+          <h3>Ekstrakurikuler Robotika</h3>
+          <p>Di SMK, saya mengikuti ekstrakurikuler Robotika yang melatih berbagai keterampilan seperti problem solving, 
+          critical thinking, teamwork, coding & programming (IoT dan mikrokontroler), desain & perakitan hardware, 
+          troubleshooting, serta kreativitas dalam menciptakan inovasi teknologi.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item animate-slide-left">
+        <div class="timeline-marker">04</div>
+        <div class="timeline-content">
+          <h3>Ketua OSIS</h3>
+          <p>Dengan berbekal pengalaman sebagai Wakil Ketua OSIS, saya memberanikan diri mengajukan diri dan akhirnya 
+          terpilih menjadi Ketua OSIS periode 2024–2025. Selama masa jabatan ini, saya mendapatkan pembelajaran 
+          yang lebih luas, mulai dari problem solving hingga manajemen konflik.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Gallery -->
+    <div class="experience-gallery">
+      <div class="gallery-item animate-scale-up">
+        <img src="foto1.jpg" alt="Experience 1">
+        <div class="gallery-overlay">
+          <h4>Pubic Speaking</h4>
+        </div>
+      </div>
+      <div class="gallery-item animate-scale-up" style="animation-delay: 0.2s;">
+        <img src="foto2.jpg" alt="Experience 2">
+        <div class="gallery-overlay">
+          <h4>Leadership</h4>
+        </div>
+      </div>
+      <div class="gallery-item animate-scale-up" style="animation-delay: 0.4s;">
+        <img src="foto3.jpg" alt="Experience 3">
+        <div class="gallery-overlay">
+          <h4>Robotic</h4>
+        </div>
+      </div>
+      <div class="gallery-item animate-scale-up" style="animation-delay: 0.6s;">
+        <img src="foto4.jpg" alt="Experience 4">
+        <div class="gallery-overlay">
+          <h4>Team Collaboration</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificate" class="certificate-section-wrapper">
+  <div class="container">
+    <div class="certificate-section animate-fade-up">
+      <h2 class="certificate-title">Sertifikat & Penghargaan</h2>
+      
+      <div class="certificate-grid">
+        <div class="certificate-item animate-slide-up">
+          <div class="certificate-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h4>Juara 1 Soccer Robot Competition</h4>
+          <p>KEJURNAS - Trans Studio Mini Malang<br>27–28 Januari 2024</p>
+        </div>
+        
+        <div class="certificate-item animate-slide-up" style="animation-delay: 0.2s;">
+          <div class="certificate-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h4>Juara 1 Teknologi Tepat Guna</h4>
+          <p>ELTRUMS XI - Electro Techno Race UMS Competition 2024</p>
+        </div>
+        
+        <div class="certificate-item animate-slide-up" style="animation-delay: 0.4s;">
+          <div class="certificate-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h4>Juara 2 FIRE FIGHT ROBOBOAT</h4>
+          <p>Automation week VII 2024 - Politeknik Perkapalan Negeri Surabaya</p>
+        </div>
+        
+        <div class="certificate-item animate-slide-up" style="animation-delay: 0.6s;">
+          <div class="certificate-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>Juara 3 Soccer Robot</h4>
+          <p>Industrial Automation and Robotic Competition (IARC) 2024 - ITS</p>
+        </div>
+      </div>
+
+      <div class="certificate-images animate-fade-up">
+        <div class="cert-img-wrapper">
+          <img src="sertifikat1.jpg" alt="Sertifikat 1">
+          <div class="cert-overlay">
+            <i class="fas fa-expand"></i>
+          </div>
+        </div>
+        <div class="cert-img-wrapper">
+          <img src="sertifikat2.jpg" alt="Sertifikat 2">
+          <div class="cert-overlay">
+            <i class="fas fa-expand"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header text-center animate-fade-up">
+      <h2 class="section-title">Kontak</h2>
+      <p class="section-subtitle">
+        Hubungi saya!
+      </p>
+    </div>
+
+    <div class="row contact-content">
+      <div class="col-lg-5 col-md-6">
+        <div class="contact-info animate-slide-right">
+          <h4><i class="fas fa-info-circle"></i> Informasi Kontak</h4>
+          
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h5>Email</h5>
+              <p>abelyanaumioctaviani06@gmail.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h5>Lokasi</h5>
+              <p>Surabaya, Jawa Timur, Indonesia</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <h5>Pendidikan</h5>
+              <p>SMK Negeri 2 Surabaya<br>Rekayasa Perangkat Lunak</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h5><i class="fas fa-share-alt"></i> Social Media</h5>
+            <div class="social-buttons">
+              <a href="https://www.instagram.com/abeeelel?igsh=eTYyNHU1OXVmd3pq" class="social-btn"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 col-md-6">
+        <form class="contact-form animate-slide-left">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" required>
+            <label for="nama"><i class="fas fa-user"></i> Nama Lengkap</label>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="subjek" placeholder="Subjek" required>
+            <label for="subjek"><i class="fas fa-tag"></i> Subjek</label>
+          </div>
+          
+          <div class="form-floating mb-4">
+            <textarea class="form-control" id="pesan" style="height: 150px" placeholder="Pesan Anda" required></textarea>
+            <label for="pesan"><i class="fas fa-message"></i> Pesan Anda</label>
+          </div>
+          
+          <button type="submit" class="btn-contact">
+            <i class="fas fa-paper-plane"></i>
+            <span>Kirim Pesan</span>
+            <div class="btn-loading">
+              <i class="fas fa-spinner fa-spin"></i>
+            </div>
+          </button>
         </form>
       </div>
     </div>
   </div>
 </section>
-</div>
 
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-text">
+        <p>&copy; 2025 Abelya Octaviani. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+  </div>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
