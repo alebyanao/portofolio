@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <span class="close-modal">&times;</span>
+  <img id="modalImage" src="" alt="Project Image">
+</div>
+
 <body>
 
 <!-- LOADING ANIMATION -->
@@ -278,19 +284,20 @@
       <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="robotics">
         <div class="project-card animate-scale-up">
           <div class="project-image">
-            <img src="proyek.jpeg" alt="Fire Fighting Robot">
+            <img src="kapal.jpg" alt="Fire Fighting Robot">
             <div class="project-overlay">
               <div class="project-links">
-                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
-                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" onclick="openImage(event, 'kapal.jpg')">
+  <i class="fas fa-eye"></i>
+</a>
               </div>
             </div>
           </div>
           <div class="project-content">
-            <h4>Fire Fighting Robot</h4>
-            <p>Robot pemadam api otomatis dengan sensor thermal</p>
+            <h4>Fire Fight Roboboat</h4>
+            <p>Robot kapal pemadam api otomatis dengan ESP32S</p>
             <div class="project-tech">
-              <span class="tech-tag">Arduino</span>
+              <span class="tech-tag">ESP32S</span>
               <span class="tech-tag">Sensors</span>
               <span class="tech-tag">C++</span>
             </div>
@@ -310,12 +317,12 @@
             </div>
           </div>
           <div class="project-content">
-            <h4>School Management App</h4>
-            <p>Aplikasi manajemen sekolah berbasis web</p>
+            <h4>Website ticket</h4>
+            <p>Platform ticketing event & event management</p>
             <div class="project-tech">
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Silverstripe</span>
             </div>
           </div>
         </div>
@@ -382,7 +389,7 @@
       <div class="timeline-item animate-slide-right">
         <div class="timeline-marker">03</div>
         <div class="timeline-content">
-          <h3>Ekstrakurikuler Robotika</h3>
+          <h3>SMK - Ekstrakurikuler Robotika</h3>
           <p>Di SMK, saya mengikuti ekstrakurikuler Robotika yang melatih berbagai keterampilan seperti problem solving, 
           critical thinking, teamwork, coding & programming (IoT dan mikrokontroler), desain & perakitan hardware, 
           troubleshooting, serta kreativitas dalam menciptakan inovasi teknologi.</p>
@@ -392,7 +399,7 @@
       <div class="timeline-item animate-slide-left">
         <div class="timeline-marker">04</div>
         <div class="timeline-content">
-          <h3>Ketua OSIS</h3>
+          <h3>SMK - Ketua OSIS</h3>
           <p>Dengan berbekal pengalaman sebagai Wakil Ketua OSIS, saya memberanikan diri mengajukan diri dan akhirnya 
           terpilih menjadi Ketua OSIS periode 2024–2025. Selama masa jabatan ini, saya mendapatkan pembelajaran 
           yang lebih luas, mulai dari problem solving hingga manajemen konflik.</p>

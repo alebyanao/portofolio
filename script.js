@@ -981,3 +981,13 @@
     }
     
 })();
+
+function openImage(event, imageSrc) {
+  event.preventDefault();
+  document.getElementById("modalImage").src = imageSrc;
+  document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
